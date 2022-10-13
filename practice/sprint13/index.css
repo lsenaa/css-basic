@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 700px;
+    height: 500px;
+    background: red;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+}
+
+.container div {
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.white,
+.yellow,
+.green {
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.white {
+    background: white;
+}
+
+.yellow {
+    background: yellow;
+    color: red;
+}
+
+.green {
+    background: green;
+    color: white;
+}
