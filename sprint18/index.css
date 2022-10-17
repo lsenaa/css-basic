@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 500px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.title {
+    width: 300px;
+    background-color: #eee;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.fa-heart {
+    color: rgb(206, 41, 41);
+    animation: Heart 1s ease-in-out infinite alternate;
+}
+
+.fa-star {
+    color: rgb(252, 231, 3);
+    animation: Star 1s ease-in-out infinite alternate;
+}
+
+.scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scroll_01,
+.scroll_02 {
+    width: 18px;
+    height: 32px;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 5px;
+    margin: 0 20px;
+}
+
+.scroll_01 {
+    animation: Scroll01 1s ease-in-out infinite alternate;
+}
+
+.scroll_01 .point {
+    width: 3px;
+    height: 6px;
+    background: black;
+}
+
+.scroll_02 .point {
+    width: 3px;
+    height: 3px;
+    background: black;
+    animation: Scroll02 1s ease-in-out infinite;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading .fa-spinner {
+    animation: Loading 2s linear infinite;
+}
+
+@keyframes Heart {
+    0% {
+        transform: scale(1.3);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.3);
+    }
+}
+
+@keyframes Star {
+    from {
+        transform: rotateY(0);
+    }
+
+    to {
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes Scroll01 {
+    from {
+        transform: translateY(-10px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes Scroll02 {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes Loading {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
